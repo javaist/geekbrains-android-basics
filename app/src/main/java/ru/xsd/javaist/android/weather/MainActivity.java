@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
-    private EditText cityName;
+    private Spinner cityName;
     private Button searchButton;
     private Switch humiditySwitch, pressureSwitch, windSwitch;
 
@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
+
         setOnSearchButtonClick();
+
         Toast.makeText(getBaseContext(), "onCreate", Toast.LENGTH_SHORT).show();
     }
 
@@ -37,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CityActivity.class);
-                String cityTitle = cityName.getText().toString();
+                Log.d(TAG, cityName.getSelectedItem().toString());
+                String cityTitle = cityName.getSelectedItem().toString();
                 intent.putExtra(cityTitleKey, cityTitle);
                 boolean humiditySwitchValue = humiditySwitch.isChecked();
                 intent.putExtra(humiditySwitchKey, humiditySwitchValue);
@@ -52,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initViews() {
         searchButton = findViewById(R.id.searchButton);
-        cityName = findViewById(R.id.searchInput);
+        cityName = findViewById(R.id.citySpinner);
         humiditySwitch = findViewById(R.id.humiditySwitch);
         pressureSwitch = findViewById(R.id.pressureSwitch);
         windSwitch = findViewById(R.id.windSwitch);

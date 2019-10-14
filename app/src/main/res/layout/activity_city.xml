@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/cityTitleText"
@@ -9,8 +10,9 @@
         android:layout_height="36dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:text="@string/defaultCityTitle"
-        android:textSize="25sp" />
+        android:text="@string/not_found"
+        style="@style/TitleText"
+         />
 
     <TableLayout
         android:layout_marginTop="10dp"
@@ -28,16 +30,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
-                android:text="@string/temperatureKey"
+                android:text="@string/temperature_key"
                 android:textAlignment="viewEnd"
-                android:textSize="20sp"/>
+                style="@style/KeyText" />
 
             <TextView
                 android:id="@+id/textTemperatureValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/defaultTextView"
-                android:textSize="20sp" />
+                android:text="@string/default_text_view"
+                style="@style/ValueText" />
         </TableRow>
 
         <TableRow
@@ -51,16 +53,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
-                android:text="@string/humidityKey"
+                android:text="@string/humidity_key"
                 android:textAlignment="viewEnd"
-                android:textSize="20sp"/>
+                style="@style/KeyText" />
 
             <TextView
                 android:id="@+id/textHumidityValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/defaultTextView"
-                android:textSize="20sp"/>
+                android:text="@string/default_text_view"
+                style="@style/ValueText" />
         </TableRow>
 
         <TableRow
@@ -74,16 +76,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
-                android:text="@string/pressureKey"
+                android:text="@string/pressure_key"
                 android:textAlignment="viewEnd"
-                android:textSize="20sp"/>
+                style="@style/KeyText" />
 
             <TextView
                 android:id="@+id/textPressureValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/defaultTextView"
-                android:textSize="20sp"/>
+                android:text="@string/default_text_view"
+                style="@style/ValueText" />
         </TableRow>
 
         <TableRow
@@ -97,16 +99,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
-                android:text="@string/windKey"
+                android:text="@string/wind_key"
                 android:textAlignment="viewEnd"
-                android:textSize="20sp"/>
+                style="@style/KeyText" />
 
             <TextView
                 android:id="@+id/textWindValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/defaultTextView"
-                android:textSize="20sp"/>
+                android:text="@string/default_text_view"
+                style="@style/ValueText" />
         </TableRow>
     </TableLayout>
 

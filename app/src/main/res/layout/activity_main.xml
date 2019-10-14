@@ -5,27 +5,28 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/counterTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_message"
-        android:textSize="25sp"
+        style="@style/TitleText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05" />
 
-    <EditText
-        android:id="@+id/searchInput"
+    <Spinner
+        android:id="@+id/citySpinner"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
+        android:entries="@array/city_array"
+        android:prompt="@string/city_prompt"
         android:layout_marginTop="16dp"
-        android:inputType="text"
-        android:hint="@string/searchStringHint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/searchButton"
+        android:text="@string/search_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/windSwitch" />
@@ -46,16 +47,18 @@
         android:layout_width="200dp"
         android:layout_height="29dp"
         android:layout_marginTop="16dp"
-        android:text="@string/humiditySwitch"
+        android:text="@string/humidity_switch"
+        style="@style/KeyText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchInput" />
+        app:layout_constraintTop_toBottomOf="@+id/citySpinner" />
 
     <Switch
         android:id="@+id/pressureSwitch"
         android:layout_width="200dp"
         android:layout_height="29dp"
-        android:text="@string/pressureSwitch"
+        android:text="@string/pressure_switch"
+        style="@style/KeyText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/humiditySwitch" />
@@ -64,7 +67,8 @@
         android:id="@+id/windSwitch"
         android:layout_width="200dp"
         android:layout_height="29dp"
-        android:text="@string/windSwitch"
+        android:text="@string/wind_switch"
+        style="@style/KeyText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pressureSwitch" />

@@ -18,7 +18,6 @@ public class CityActivity extends AppCompatActivity {
     private TextView cityTitleText;
     private TableRow temperatureRow, humidityRow, pressureRow, windRow;
     private TextView temperatureValue, humidityValue, pressureValue, windValue;
-    private boolean action;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,9 +30,9 @@ public class CityActivity extends AppCompatActivity {
     private void performSearch() {
         String searchString = getIntent().getStringExtra(MainActivity.cityTitleKey);
         if  (searchString.toLowerCase().contains("петербург") || searchString.toLowerCase().contains("petersburg")) {
-            showData("Петербург", 6, 87, 755, 2.5);
+            showData(searchString, 6, 87, 755, 2.5);
         } else if (searchString.toLowerCase().contains("москва") || searchString.toLowerCase().contains("moscow")) {
-            showData("Москва", 12, 83, 756, 0.8);
+            showData(searchString, 12, 83, 756, 0.8);
         } else {
             showData(null, 0, 0, 0, 0);
         }
@@ -41,7 +40,6 @@ public class CityActivity extends AppCompatActivity {
 
     private void showData(String cityName, int temperature, int humidity, int pressure, double wind) {
         if (cityName == null) {
-            cityTitleText.setText("Не найден");
             temperatureRow.setVisibility(View.GONE);
             humidityRow.setVisibility(View.GONE);
             pressureRow.setVisibility(View.GONE);
@@ -63,7 +61,7 @@ public class CityActivity extends AppCompatActivity {
 //            Давление
             if (getIntent().getBooleanExtra(MainActivity.pressureSwitchKey, false)) {
                 pressureRow.setVisibility(View.VISIBLE);
-                String textValue = String.format(Locale.ENGLISH, "%d%s", pressure, " мм.р.с.");
+                String textValue = String.format(Locale.ENGLISH, "%d %s", pressure, getString(R.string.pressure_units));
                 pressureValue.setText(textValue);
             } else {
                 pressureRow.setVisibility(View.GONE);
@@ -71,7 +69,7 @@ public class CityActivity extends AppCompatActivity {
 //            Ветер
             if (getIntent().getBooleanExtra(MainActivity.windSwitchKey, false)) {
                 windRow.setVisibility(View.VISIBLE);
-                String textValue = String.format(Locale.ENGLISH, "%s%s", wind, " м/с");
+                String textValue = String.format(Locale.ENGLISH, "%s %s", wind, getString(R.string.speed_units));
                 windValue.setText(textValue);
             } else {
                 windRow.setVisibility(View.GONE);
