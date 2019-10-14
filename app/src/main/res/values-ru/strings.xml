@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Погода</string>
+    <string name="hello_message">Введите название города</string>
+    <string name="search_button">Показать</string>
+    <string name="not_found">Не найден</string>
+    <string name="temperature_key">Температура:</string>
+    <string name="humidity_key">Влажность:</string>
+    <string name="pressure_key">Давление:</string>
+    <string name="wind_key">Скорость ветра:</string>
+    <string name="default_text_view">нет данных</string>
+    <string name="wind_switch">Ветер</string>
+    <string name="pressure_switch">Давление</string>
+    <string name="humidity_switch">Влажность</string>
+    <string name="city_prompt">Город</string>
+    <string name="pressure_units">мм.р.с.</string>
+    <string name="speed_units">м/с</string>
+
+</resources>

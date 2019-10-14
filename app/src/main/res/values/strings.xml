@@ -1,16 +1,18 @@
 <resources>
-    <string name="app_name">Погода</string>
-    <string name="hello_message">Введите название города</string>
-    <string name="searchButton">Показать</string>
-    <string name="defaultCityTitle">Не найден</string>
-    <string name="temperatureKey">Температура:</string>
-    <string name="humidityKey">Влажность:</string>
-    <string name="pressureKey">Давление:</string>
-    <string name="windKey">Скорость ветра:</string>
-    <string name="defaultTextView">нет данных</string>
-    <string name="windSwitch">Ветер</string>
-    <string name="pressureSwitch">Давление</string>
-    <string name="humiditySwitch">Влажность</string>
-    <string name="searchStringHint">Город</string>
+    <string name="app_name">Weather</string>
+    <string name="hello_message">Select city name</string>
+    <string name="search_button">Show</string>
+    <string name="not_found">Not found</string>
+    <string name="temperature_key">Temperature:</string>
+    <string name="humidity_key">Humidity:</string>
+    <string name="pressure_key">Pressure:</string>
+    <string name="wind_key">Wind:</string>
+    <string name="default_text_view">N/A</string>
+    <string name="wind_switch">Wind</string>
+    <string name="pressure_switch">Pressure</string>
+    <string name="humidity_switch">Humidity</string>
+    <string name="city_prompt">Select city</string>
+    <string name="pressure_units">mm Hg</string>
+    <string name="speed_units">m/s</string>
 
 </resources>
